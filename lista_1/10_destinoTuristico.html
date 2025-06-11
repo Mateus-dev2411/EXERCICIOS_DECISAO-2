@@ -17,18 +17,17 @@
     const gViagemRJ = Number(prompt(`Informe o valor do transporte aéreo até RJ`));
     const valorhotelSP = Number(prompt(`Informe o valor do hotel em SP (Diária)`));
     const valorhotelRJ = Number(prompt(`Informe o valor do hotel em RJ (Diária)`));
-    const diasSP = Number(prompt(`Informe a quantidde de dias que vai ficar em SP`));
-    const diasRJ = Number(prompt(`Informe a quantidde de dias que vai ficar em JS`));
+    const dias = Number(prompt(`Informe a quantidde de dias que vai ficar em SP e JS`));
 
     //PROCESSAMENTO
 
     //SP
 
-    gastoSp = (gViagemSP + (valorhotelSP * diasSP)).toFixed(2);
+    gastoSp = (gViagemSP + (valorhotelSP * dias)).toFixed(2);
 
     //RJ
 
-    gastoRJ = (gViagemRJ + (valorhotelRJ * diasRJ)).toFixed(2);
+    gastoRJ = (gViagemRJ + (valorhotelRJ * dias)).toFixed(2);
 
     //Calculo
 
