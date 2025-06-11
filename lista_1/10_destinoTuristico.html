@@ -13,10 +13,33 @@
 
     //ENTRADA
 
+    const gViagemSP = Number(prompt(`Informe o valor do transporte aéreo até SP`));
+    const gViagemRJ = Number(prompt(`Informe o valor do transporte aéreo até RJ`));
+    const valorhotelSP = Number(prompt(`Informe o valor do hotel em SP (Diária)`));
+    const valorhotelRJ = Number(prompt(`Informe o valor do hotel em RJ (Diária)`));
+    const diasSP = Number(prompt(`Informe a quantidde de dias que vai ficar em SP`));
+    const diasRJ = Number(prompt(`Informe a quantidde de dias que vai ficar em JS`));
 
     //PROCESSAMENTO
 
-    
+    //SP
+
+    gastoSp = (gViagemSP + (valorhotelSP * diasSP)).toFixed(2);
+
+    //RJ
+
+    gastoRJ = (gViagemRJ + (valorhotelRJ * diasRJ)).toFixed(2);
+
+    //Calculo
+
+    if (gastoSp > gastoRJ){
+        alert(`A viagem com o menor preço é a de Rio de Janeiro, gastando ${gastoRJ}R$`);
+    } else if (gastoRJ > gastoSp){
+        alert(`A viagem com o menor preço é a de São Paulo, gastando ${gastoSp}R$`);
+    } else {
+        alert(`Digite apenas NUMEROS`);
+    }
+
     //SAÍDA
 
 </script>
