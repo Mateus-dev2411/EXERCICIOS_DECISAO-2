@@ -12,9 +12,12 @@
     */
 
     //ENTRADA
+
     const valorComputador = Number(prompt("Informe o valor do computador:"));
     const formaPagamento = prompt("Informe a forma de pagamento (B - Boleto, D - Dinheiro, P - PIX):").toUpperCase().trim();
+
     //PROCESSAMENTO
+
     if (formaPagamento == `B`){
         valorF = (valorComputador - (valorComputador * 0.03));
         alert(`O valor a pagar será de ${valorF}R$`)
@@ -27,6 +30,7 @@
     } else {
         alert(`ERROR\nUtilize apenas (B - Boleto, D - Dinheiro, P - PIX)`);
     }
+    
     //SAÍDA
 
 </script>

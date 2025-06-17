@@ -16,10 +16,30 @@
 
     //ENTRADA
 
-
+    const cargo = prompt("Qual o seu cargo? (Motorista/Cobrador)").trim().toLowerCase();
+    const viagens = Number(prompt("Quantas viagens foram realizadas por dia?"));
     //PROCESSAMENTO
 
+    const diaria = 100;
+    let adicional = 0;
+    if (cargo === "motorista") {
+        if (viagens <= 10) {
+            adicional = diaria * 0.2;
+        } else {
+            adicional = diaria * 0.35;
+        }
+    } else if (cargo === "cobrador") {
+        if (viagens > 10) {
+            adicional = diaria * 0.1;
+        } else {
+            adicional = 0;
+        }
+    } else {
+        alert("Cargo inválido!");
+    }
+    const valorFinal = diaria + adicional;
     
     //SAÍDA
 
+    alert(`Cargo: ${cargo} \nValor final recebido: R$ ${valorFinal.toFixed(2)}`);
 </script>

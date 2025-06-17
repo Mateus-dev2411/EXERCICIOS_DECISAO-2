@@ -12,10 +12,24 @@
 
     //ENTRADA
 
-
+    const distancia = Number(prompt("Informe a distância da viagem (km):"));
+    const kmPorDia = Number(prompt("Quantos km pretende viajar por dia?"));
+    
     //PROCESSAMENTO
 
-    
+    const dias = Math.ceil(distancia / kmPorDia);
+    let mensagem = "";
+    if (dias <= 3) {
+        mensagem = `Duração: ${dias} dias. Pode ser realizada em Qualquer Período.`;
+    } else if (dias <= 10) {
+        mensagem = `Duração: ${dias} dias. Pode ser realizada nas Férias de Julho.`;
+    } else if (dias <= 20) {
+        mensagem = `Duração: ${dias} dias. Pode ser realizada nas Férias de Verão.`;
+    } else {
+        mensagem = `Duração: ${dias} dias. Deverá Trabalhar Remoto.`;
+    }
+
     //SAÍDA
 
+    alert(mensagem);
 </script>
